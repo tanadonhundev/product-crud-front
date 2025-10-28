@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { k2d } from "./font";
+import AppHeader from "@/components/app/AppHeader";
 
 export const metadata: Metadata = {
   title: "Product CRUD",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${k2d.className}`}>{children}</body>
+      <body className={`${k2d.className}`}>
+        <AppHeader />
+        {children}
+      </body>
     </html>
   );
 }
