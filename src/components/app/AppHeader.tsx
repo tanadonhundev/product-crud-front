@@ -4,7 +4,7 @@ import Link from "next/link";
 // import AppLogoutButton from "./AppLogoutButton";
 // import AppHeaderMobile from "./AppHeaderMobile";
 // import { auth } from "@/lib/auth";
-import { headers } from "next/headers";
+// import { headers } from "next/headers";
 
 const AppHeader = async () => {
   //   const session = await auth.api.getSession({
@@ -16,7 +16,7 @@ const AppHeader = async () => {
       <header className="relative py-4 md:py-6">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <a href="#" className="flex font-bold text-3xl">
                 Product CRUD
               </a>
