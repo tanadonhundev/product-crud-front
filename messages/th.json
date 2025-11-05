@@ -1,0 +1,21 @@
+{
+  "greeting": "Hello",
+  "welcome": "Welcome to our website!",
+  "description": "This is a sample project using next-intl.",
+  "button": {
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "language": {
+    "english": "English",
+    "thai": "Thai"
+  },
+  "error": {
+    "INVALID_EMAIL_OR_PASSWORD": "รหัสผ่านไม่ถูฏต้อง"
+  }
+}

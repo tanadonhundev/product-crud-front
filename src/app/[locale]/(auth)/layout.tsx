@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "../../globals.css";
 import { k2d } from "../../font";
 import { Toaster } from "sonner";
+import { getLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 export const metadata: Metadata = {
   title: "SeaBite",
@@ -13,10 +15,13 @@ export default async function AuthLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
   return (
-    <html lang="en">
-      <body className={`${k2d.className}`}>{children}</body>
-      <Toaster richColors position="bottom-center" />
+    <html lang={locale}>
+      <body className={`${k2d.className}`}>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <Toaster richColors position="bottom-center" />
+      </body>
     </html>
   );
 }
