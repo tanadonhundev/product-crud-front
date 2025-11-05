@@ -5,6 +5,8 @@ import AppLogoutButton from "./AppLogoutButton";
 import AppHeaderMobile from "./AppHeaderMobile";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
+import { ShoppingCart } from "lucide-react";
+import { AppCartTotal } from "./AppCartTotal";
 
 const AppHeader = async () => {
   const session = await auth.api.getSession({
@@ -42,6 +44,12 @@ const AppHeader = async () => {
             <div className="hidden lg:flex lg:items-center lg:space-x-3">
               {!session && (
                 <>
+                  <Link href={"/cart"}>
+                    <div className="flex gap-1 p-1 border border-black rounded-sm">
+                      <ShoppingCart className="h-5 w-5" />
+                      <AppCartTotal />
+                    </div>
+                  </Link>
                   <Button variant={"outline"} asChild>
                     <Link href={"login"}>เข้าสู่ระบบ</Link>
                   </Button>
