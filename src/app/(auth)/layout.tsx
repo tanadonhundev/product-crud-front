@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import { k2d } from "../font";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "SeaBite",
@@ -15,6 +16,7 @@ export default async function AuthLayout({
   return (
     <html lang="en">
       <body className={`${k2d.className}`}>{children}</body>
+      <Toaster richColors position="bottom-center" />
     </html>
   );
 }
