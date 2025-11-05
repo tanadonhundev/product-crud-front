@@ -18,7 +18,7 @@ const AppLogoutButton = () => {
 
   return (
     <>
-      <Button onClick={handleLogout}>
+      <Button onClick={handleLogout} className="bg-red-500 hover:bg-red-400 cursor-pointer">
         <IconLogout />
         Log out
       </Button>
