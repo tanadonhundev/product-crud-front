@@ -42,14 +42,14 @@ const AppHeader = async () => {
             </div>
             {/* Desktop login/signup */}
             <div className="hidden lg:flex lg:items-center lg:space-x-3">
+              <Link href={"/cart"}>
+                <div className="flex gap-1 p-1 border border-black rounded-sm">
+                  <ShoppingCart className="h-5 w-5" />
+                  <AppCartTotal />
+                </div>
+              </Link>
               {!session && (
                 <>
-                  <Link href={"/cart"}>
-                    <div className="flex gap-1 p-1 border border-black rounded-sm">
-                      <ShoppingCart className="h-5 w-5" />
-                      <AppCartTotal />
-                    </div>
-                  </Link>
                   <Button variant={"outline"} asChild>
                     <Link href={"login"}>เข้าสู่ระบบ</Link>
                   </Button>
