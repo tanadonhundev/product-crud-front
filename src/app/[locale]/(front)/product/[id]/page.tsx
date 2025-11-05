@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 
 
-import { getProductByIdService } from "@/app/services/product-service";
+import { getProductByIdService } from "@/services/product-service";
 import { AppCartBtn } from "@/components/app/AppCartBtn";
 // import CartButton from "@/components/app/CartButton";
 
