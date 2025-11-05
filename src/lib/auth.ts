@@ -22,4 +22,21 @@ export const auth = betterAuth({
     requireEmailVerification: false,
     minPasswordLength: 4,
   },
+  session: {
+    expiresIn: 60 * 30, // ✅ 30 นาที
+    updateAge: 60 * 5, // ✅ อัปเดตทุก 5 นาที
+  },
+  advanced: {
+    cookiePrefix: "thana-app",
+  },
+  user: {
+    additionalFields: {
+      role: {
+        type: "string",
+        required: false,
+        defaultValue: "user",
+        input: false, // don't allow user to set role
+      },
+    },
+  },
 });
