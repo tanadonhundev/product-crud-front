@@ -32,7 +32,7 @@ export default async function ProductDetailPage({
             return (
               <CarouselItem key={item.id}>
                 <Image
-                  src={`/images/${item.imageName}`}
+                  src={`/uploads/${item.imageName}`}
                   alt={item.imageName}
                   width={0}
                   height={0}

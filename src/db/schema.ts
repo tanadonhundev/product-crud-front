@@ -75,7 +75,7 @@ export const verification = mysqlTable("verification", {
 export const product = mysqlTable(
   "product",
   {
-    id: int().autoincrement().notNull(),
+    id: int().primaryKey().autoincrement().notNull(),
     title: varchar({ length: 255 }).notNull(),
     price: decimal({ precision: 10, scale: 2 }).notNull(),
     createdAt: timestamp("created_at", { mode: "string" }).default(

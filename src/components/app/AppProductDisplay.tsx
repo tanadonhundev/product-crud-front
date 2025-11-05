@@ -37,7 +37,7 @@ const AppProductDisplay = ({ products }: ProductListProps) => {
           {product.productImages.length > 0 && (
             <CardContent className="p-2" key={product.productImages[0].id}>
               <Image
-                src={`/images/${product.productImages[0].imageName}`}
+                src={`/uploads/${product.productImages[0].imageName}`}
                 alt={product.productImages[0].imageName}
                 width={0}
                 height={0}
